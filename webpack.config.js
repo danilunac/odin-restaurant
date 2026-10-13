@@ -1,7 +1,6 @@
 // webpack.config.js
 import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import test from "node:test";
 
 export default {
   mode: "development",
@@ -19,7 +18,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|woff|woff2)$/i,
         type: "asset/resource",
       },
     ],
