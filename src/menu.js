@@ -74,14 +74,14 @@ function addImage(src, alt) {
 }
 
 function createTitle(text) {
-    const title = document.createElement('h3');
+    const title = document.createElement('h2');
     title.textContent = text;
 
     return title;
 }
 
 function createSmallTitle(text) {
-    const smallTitle = document.createElement('h4');
+    const smallTitle = document.createElement('h3');
     smallTitle.textContent = text;
 
     return smallTitle;
