@@ -8,6 +8,7 @@ function createMenu() {
     menu.id = 'menu';
 
     const beerPost = postContainer();
+    beerPost.classList.add('beer');
     beerPost.appendChild(addImage(craftBeersImg, 'Craft beers'));
     beerPost.appendChild(createTitle('Our craft beers'));
 
@@ -22,11 +23,11 @@ function createMenu() {
     const stout = document.createElement('strong');
     stout.textContent = 'Stout - ';
 
-    beerPost.appendChild(createParagraphWithDescription(lager, 'light and refreshing, with a smooth malt flavor.'));
-    beerPost.appendChild(createParagraphWithDescription(paleAle, 'balanced, with malty notes and a touch of hops.'));
-    beerPost.appendChild(createParagraphWithDescription(ipa, 'intense and bitter, with a strong hop character.'));
-    beerPost.appendChild(createParagraphWithDescription(wheatBeer, 'smooth and refreshing, with citrus notes.'));
-    beerPost.appendChild(createParagraphWithDescription(stout, 'dark and creamy, with coffee and chocolate notes.'));
+    beerPost.appendChild(createBeerDescription(lager, 'light and refreshing, with a smooth malt flavor.'));
+    beerPost.appendChild(createBeerDescription(paleAle, 'balanced, with malty notes and a touch of hops.'));
+    beerPost.appendChild(createBeerDescription(ipa, 'intense and bitter, with a strong hop character.'));
+    beerPost.appendChild(createBeerDescription(wheatBeer, 'smooth and refreshing, with citrus notes.'));
+    beerPost.appendChild(createBeerDescription(stout, 'dark and creamy, with coffee and chocolate notes.'));
 
     const tapasContainer = document.createElement('div');
     tapasContainer.id = 'tapas';
@@ -86,11 +87,11 @@ function createSmallTitle(text) {
     return smallTitle;
 }
 
-function createParagraphWithDescription(strong, text) {
+function createBeerDescription(nameStrong, description) {
     const p = document.createElement('p');
 
-    p.appendChild(strong);
-    p.appendChild(document.createTextNode(text));
+    p.appendChild(nameStrong);
+    p.appendChild(document.createTextNode(description));
 
     return p;
 }
