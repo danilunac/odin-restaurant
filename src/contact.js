@@ -10,8 +10,8 @@ function createContact() {
     address.textContent = 'Address: '
 
     contact.appendChild(createParagraph(phoneNumber, '+34 933 526 719'));
-    contact.appendChild(createParagraph(email, 'Email: beertato@beertato.com'));
-    contact.appendChild(createParagraph(address, 'Address: Passatge Utset, 4, Barcelona (Spain)'));
+    contact.appendChild(createParagraph(email, 'beertato@beertato.com'));
+    contact.appendChild(createParagraph(address, 'Passatge Utset, 4, Barcelona (Spain)'));
 
     return contact;
 }
