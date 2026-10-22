@@ -1,0 +1,206 @@
+/*!***************************!*\
+  !*** css ./src/style.css ***!
+  \***************************/
+@font-face {
+  font-family: 'Montserrat';
+  src: url(2adc1dbe62db836d61f0.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(207bf85ae7883ca32467.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(d35a2d9eb869d377d3f5.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --nav-bg: linear-gradient(to bottom, #000000, #202020);
+    --nav-text: rgb(255, 255, 255);
+    --page-bg: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--page-bg);
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav button {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--nav-text);
+    transition: transform 200ms ease;
+}
+
+nav button:hover {
+    transform: translateY(-2px);
+}
+
+nav button.active {
+    border-bottom: 2px solid var(--nav-text);
+}
+
+/* Main container */
+
+#content {
+    display: flex;
+    justify-content: center;
+    background-color: var(--page-bg);
+    margin: 30px 0;
+    width: min(600px, 100%);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+/* Home page */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#home > img {
+    width: 200px;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+#home > h1 {
+    align-self: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+#home > p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#home > p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Menu page */
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    gap: 25px;
+}
+
+.beer > p {
+    margin-bottom: 5px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post > img,
+#tapas img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.post > h2 {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+#tapas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#tapas img {
+    width: 150px;
+}
+
+#tapas h3 {
+    font-size: 1.1rem;
+}
+
+#tapas > h2 {
+    font-size: 1.2rem;
+}
+
+/* Contact page */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#contact > p {
+    line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    font-size: 0.8rem;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
